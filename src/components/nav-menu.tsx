@@ -11,7 +11,7 @@ import { Icons } from "@components/icons";
 
 export const NavMenu = (props: NavigationMenuProps) => (
 	<NavigationMenu className="sticky top-0 h-20 max-w-full justify-around" {...props}>
-		<NavigationMenuList className="flex">
+		<NavigationMenuList className="w-36">
 			<NavigationMenuItem>
 				<Icons.logo className="size-10"/>
 			</NavigationMenuItem>
@@ -19,12 +19,12 @@ export const NavMenu = (props: NavigationMenuProps) => (
 		<NavigationMenuList className="gap-0 space-x-0 text-sm">
 			<NavigationMenuItem>
 				<Button variant="link" className="text-[15px] font-normal" asChild>
-					<Link href="#">home</Link>
+					<Link href="#home">home</Link>
 				</Button>
 			</NavigationMenuItem>
 			<NavigationMenuItem>
 				<Button variant="link" className="text-[15px] font-normal" asChild>
-					<Link href="#">about</Link>
+					<Link href="#about">about</Link>
 				</Button>
 			</NavigationMenuItem>
 			<NavigationMenuItem>
@@ -34,12 +34,12 @@ export const NavMenu = (props: NavigationMenuProps) => (
 			</NavigationMenuItem>
 			<NavigationMenuItem>
 				<Button variant="link" className="text-[15px] font-normal" asChild>
-					<Link href="#">contact</Link>
+					<Link href="#contact">contact</Link>
 				</Button>
 			</NavigationMenuItem>
 		</NavigationMenuList>
 		<NavigationMenuList>
-			<NavigationMenuItem>
+			<NavigationMenuItem className="w-36 flex justify-center">
 				<Button>
 					Get Started <ArrowUpRight/>
 				</Button>

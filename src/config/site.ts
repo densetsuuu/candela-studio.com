@@ -1,4 +1,3 @@
-import { Project } from "@/components/sections/work/project";
 import { BackgroundConfig, NavConfig, NavItem, SiteConfig } from "@/types";
 
 //#region SiteConfig
@@ -49,32 +48,4 @@ export const backgroundConfig: BackgroundConfig = {
 		nbOctaves: 3,
 	},
 };
-//#endregion
-
-//#region Projects
-export const projectsConfig: Project[] = [
-	{
-		title: "Bookzy",
-		icon: "bookzy",
-		description: "Test",
-		image: "/images/projects/work-placeholder.png",
-		url: "",
-	},
-	{
-		title: "MADPS",
-		icon: "github",
-		description: "Test",
-		image: "/images/projects/work-placeholder.png",
-		url: "",
-	},
-	{
-		title: "IUT Onboarding",
-		description:
-			"Onboarding screen for the IUT of Bordeaux's computer science department.",
-		image: "/images/projects/iut-onboarding.png",
-		url: "",
-		color: "#6c647c",
-		icon: "iut",
-	},
-];
 //#endregion

@@ -1,23 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require("tailwindcss/defaultTheme");
-
-const colors = {
-	light: {
-		text: "#000000",
-		background: "#f2f2f2",
-		primary: "#d9c9c9",
-		secondary: "#aec6ae",
-		accent: "#59597d",
-		ghost: "gray-500",
-	},
-	dark: {
-		text: "#ffffff",
-		background: "#0d0d0d",
-		primary: "#395139",
-		secondary: "#362626",
-		accent: "#8282a6",
-	},
-};
+import * as defaultTheme from "tailwindcss/defaultTheme";
 
 module.exports = {
 	darkMode: ["class"],
@@ -106,15 +88,6 @@ module.exports = {
     			sm: 'calc(var(--radius) - 4px)'
     		}
     	},
-    	fontFamily: {
-    		sans: [
-    			'var(--font-sans)',
-                ...defaultTheme.fontFamily.sans
-            ],
-    		heading: [
-    			'var(--font-heading)'
-    		]
-    	}
     },
 	plugins: [
 		require("tailwindcss-animate"),

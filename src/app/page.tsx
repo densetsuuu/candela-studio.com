@@ -40,8 +40,6 @@ export default function IndexPage() {
 						{component}
 					</section>
 				))}
-
-				<AboutSection/>
 			</main>
 
 			<div className="sticky bottom-4 ml-4">

@@ -1,5 +1,6 @@
 import {
 	Timeline,
+	TimelineDate,
 	TimelineHeader,
 	TimelineIndicator,
 	TimelineItem,
@@ -12,40 +13,43 @@ const items = [
 		id: 1,
 		date: "Mar 15, 2024",
 		title: "Project Kickoff",
-		description:
-			"Initial team meeting and project scope definition. Established key milestones and resource allocation.",
 	},
 	{
 		id: 2,
 		date: "Mar 22, 2024",
 		title: "Design Phase",
-		description:
-			"Completed wireframes and user interface mockups. Stakeholder review and feedback incorporated.",
 	},
 	{
 		id: 3,
 		date: "Apr 5, 2024",
 		title: "Development Sprint",
-		description:
-			"Backend API implementation and frontend component development in progress.",
 	},
 	{
 		id: 4,
 		date: "Apr 19, 2024",
 		title: "Testing & Deployment",
-		description:
-			"Quality assurance testing, performance optimization, and production deployment preparation.",
+	},
+	{
+		id: 5,
+		date: "April 11, 2023",
+		title: "User Training",
 	},
 ]
 
 export function AboutSection() {
 	return (
-		<Timeline defaultValue={3}>
+		
+		<Timeline defaultValue={3} className="w-64">
 			{items.map((item) => (
-				<TimelineItem key={item.id} step={item.id}>
+				<TimelineItem
+					key={item.id}
+					step={item.id}
+					className="w-[calc(50%-1.5rem)] odd:ms-auto even:text-right even:group-data-[orientation=vertical]/timeline:ms-0 even:group-data-[orientation=vertical]/timeline:me-8 even:group-data-[orientation=vertical]/timeline:[&_[data-slot=timeline-indicator]]:-right-6 even:group-data-[orientation=vertical]/timeline:[&_[data-slot=timeline-indicator]]:left-auto even:group-data-[orientation=vertical]/timeline:[&_[data-slot=timeline-indicator]]:translate-x-1/2 even:group-data-[orientation=vertical]/timeline:[&_[data-slot=timeline-separator]]:-right-6 even:group-data-[orientation=vertical]/timeline:[&_[data-slot=timeline-separator]]:left-auto even:group-data-[orientation=vertical]/timeline:[&_[data-slot=timeline-separator]]:translate-x-1/2"
+				>
 					<TimelineHeader>
 						<TimelineSeparator/>
-						<TimelineTitle className="-mt-0.5">{item.title}</TimelineTitle>
+						<TimelineDate>{item.date}</TimelineDate>
+						<TimelineTitle>{item.title}</TimelineTitle>
 						<TimelineIndicator/>
 					</TimelineHeader>
 				</TimelineItem>
