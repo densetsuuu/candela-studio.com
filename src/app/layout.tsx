@@ -6,8 +6,8 @@ import { siteConfig } from "@/config/site";
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { Compose, providers } from "@/components/compose";
 import { NavMenu } from "@components/nav-menu";
+import { ThemeProvider } from "@components/theme-provider";
 //#endregion
 
 //#region Fonts
@@ -43,19 +43,24 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 		<body
 			className={cn(
 				"antialiased font-sans",
 				fontHeading.variable,
 				fontSans.variable
 			)}>
-		<Compose providers={providers}>
+		<ThemeProvider
+			attribute="class"
+			defaultTheme="system"
+			enableSystem
+			disableTransitionOnChange
+		>
 			<div className="font-sans">
 				<NavMenu/>
 				{children}
 			</div>
-		</Compose>
+		</ThemeProvider>
 		</body>
 		</html>
 	);

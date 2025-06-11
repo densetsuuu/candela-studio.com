@@ -8,45 +8,51 @@ import { ArrowUpRight, LucideIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { Icons } from "@components/icons";
+import { ToggleTheme } from "@components/toggle-theme";
 
-export const NavMenu = (props: NavigationMenuProps) => (
-	<NavigationMenu className="sticky top-0 h-20 max-w-full justify-around" {...props}>
-		<NavigationMenuList className="w-36">
-			<NavigationMenuItem>
-				<Icons.logo className="size-10"/>
-			</NavigationMenuItem>
-		</NavigationMenuList>
-		<NavigationMenuList className="gap-0 space-x-0 text-sm">
-			<NavigationMenuItem>
-				<Button variant="link" className="text-[15px] font-normal" asChild>
-					<Link href="#home">home</Link>
-				</Button>
-			</NavigationMenuItem>
-			<NavigationMenuItem>
-				<Button variant="link" className="text-[15px] font-normal" asChild>
-					<Link href="#about">about</Link>
-				</Button>
-			</NavigationMenuItem>
-			<NavigationMenuItem>
-				<Button variant="link" className="text-[15px] font-normal" asChild>
-					<Link href="#faq">faq</Link>
-				</Button>
-			</NavigationMenuItem>
-			<NavigationMenuItem>
-				<Button variant="link" className="text-[15px] font-normal" asChild>
-					<Link href="#contact">contact</Link>
-				</Button>
-			</NavigationMenuItem>
-		</NavigationMenuList>
-		<NavigationMenuList>
-			<NavigationMenuItem className="w-36 flex justify-center">
-				<Button>
-					Get Started <ArrowUpRight/>
-				</Button>
-			</NavigationMenuItem>
-		</NavigationMenuList>
-	</NavigationMenu>
-);
+export const NavMenu = (props: NavigationMenuProps) => {
+	return (
+		<NavigationMenu className="sticky top-0 h-20 max-w-full justify-around" {...props}>
+			<NavigationMenuList className="w-36">
+				<NavigationMenuItem>
+					<Icons.logo className="size-10 fill-black dark:fill-white"/>
+				</NavigationMenuItem>
+			</NavigationMenuList>
+			<NavigationMenuList className="gap-0 space-x-0 text-sm hidden md:flex">
+				<NavigationMenuItem>
+					<Button variant="link" asChild className="text-inherit">
+						<Link href="#home">home</Link>
+					</Button>
+				</NavigationMenuItem>
+				<NavigationMenuItem>
+					<Button variant="link" asChild className="text-inherit">
+						<Link href="#about">about</Link>
+					</Button>
+				</NavigationMenuItem>
+				<NavigationMenuItem>
+					<Button variant="link" asChild className="text-inherit">
+						<Link href="#faq">faq</Link>
+					</Button>
+				</NavigationMenuItem>
+				<NavigationMenuItem>
+					<Button variant="link" asChild className="text-inherit">
+						<Link href="#contact">contact</Link>
+					</Button>
+				</NavigationMenuItem>
+			</NavigationMenuList>
+			<NavigationMenuList className="w-36 flex justify-center">
+				<NavigationMenuItem>
+					<Button className="rounded-none">
+						Recevoir un devis <ArrowUpRight/>
+					</Button>
+				</NavigationMenuItem>
+				<NavigationMenuItem>
+					<ToggleTheme/>
+				</NavigationMenuItem>
+			</NavigationMenuList>
+		</NavigationMenu>
+	);
+}
 
 const ListItem = React.forwardRef<
 	React.ElementRef<typeof Link>,

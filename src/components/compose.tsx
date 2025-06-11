@@ -1,6 +1,8 @@
 "use client";
 
-export const providers: ComposeProps["providers"] = [];
+import { ThemeProvider } from "next-themes";
+
+export const providers: ComposeProps["providers"] = [ThemeProvider];
 
 export interface ComposeProps {
 	providers: React.FC<{ children: React.ReactNode | React.ReactNode[] }>[];

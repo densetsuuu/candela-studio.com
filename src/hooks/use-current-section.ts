@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function useCurrentSection() {
 	const [currentSection, setCurrentSection] = useState<string>("home");
-	const sections = ["home", "about", "work", "contact"];
+	const sections = ["home", "about", "faq", "contact"];
 	const handleScroll = () => {
 		const scrollPosition = window.scrollY;
 		const section = sections.find((section) => {

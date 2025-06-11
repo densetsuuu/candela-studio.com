@@ -2,11 +2,11 @@ import { CallToAction } from "../call-to-action"
 import { Presentation } from "../presentation"
 import { ScrollLabel } from "../scroll-label"
 
-export const HomeSection = () => {
+export const HeroSection = () => {
 
 	return (
 		<>
-			<div className="flex flex-col items-center gap-4 sm:items-start">
+			<div className="flex flex-col gap-4 items-center sm:items-start">
 				<Presentation/>
 				<CallToAction/>
 			</div>

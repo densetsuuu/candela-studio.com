@@ -1,13 +1,17 @@
 "use client";
 
-import { siteConfig } from "@/config/site";
 import { Button } from "@ui/button";
+import { ArrowUpRight } from "lucide-react";
 
 export function CallToAction() {
 	return (
-		<Button variant={"link"}
-						className="font-normal underline underline-offset-10 decoration-1 text-gray-500">
-			{siteConfig.email}
-		</Button>
+		<div className="flex gap-5">
+			<Button className="rounded-none" size="lg">
+				Recevoir un devis <ArrowUpRight/>
+			</Button>
+			<Button variant="outline" className="rounded-none" size="lg">
+				Nous contacter
+			</Button>
+		</div>
 	);
 }

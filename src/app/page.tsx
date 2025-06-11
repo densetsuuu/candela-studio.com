@@ -1,12 +1,13 @@
 "use client";
 
 import { AboutSection } from "@/components/sections/about-section";
-import { HomeSection } from "@/components/sections/home-section";
+import { HeroSection } from "@components/sections/hero-section";
 import useCurrentSection from "@/hooks/use-current-section";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@ui/breadcrumb";
 import Link from "next/link";
 import { SlashIcon } from "lucide-react";
 import { FaqSection } from "@components/sections/faq-section";
+import { ArgumentsSection } from "@components/sections/arguments-section";
 
 type Section = {
 	key: string;
@@ -16,7 +17,11 @@ type Section = {
 const sections: Section[] = [
 	{
 		key: "home",
-		component: <HomeSection/>,
+		component: <HeroSection/>,
+	},
+	{
+		key: "why-us",
+		component: <ArgumentsSection/>,
 	},
 	{
 		key: "about",
@@ -36,7 +41,7 @@ export default function IndexPage() {
 			<main>
 				{sections.map(({ key, component }) => (
 					<section key={key} id={key}
-									 className="sm:px-40 flex flex-col justify-around min-h-screen items-center snap-start">
+									 className="sm:px-40 flex flex-col justify-around min-h-screen items-center">
 						{component}
 					</section>
 				))}
@@ -47,7 +52,7 @@ export default function IndexPage() {
 					<BreadcrumbList>
 						<BreadcrumbItem>
 							<BreadcrumbLink asChild>
-								<Link href="/">Home</Link>
+								<Link href="/">Candela Studio</Link>
 							</BreadcrumbLink>
 						</BreadcrumbItem>
 						<BreadcrumbSeparator>
