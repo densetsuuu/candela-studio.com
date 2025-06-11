@@ -2,9 +2,11 @@
 
 import { AboutSection } from "@/components/sections/about-section";
 import { HomeSection } from "@/components/sections/home-section";
-import { WorkSection } from "@/components/sections/work-section";
 import useCurrentSection from "@/hooks/use-current-section";
-import { BreadcrumbItem, Breadcrumbs } from "@nextui-org/react";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@ui/breadcrumb";
+import Link from "next/link";
+import { SlashIcon } from "lucide-react";
+import { FaqSection } from "@components/sections/faq-section";
 
 type Section = {
 	key: string;
@@ -21,8 +23,8 @@ const sections: Section[] = [
 		component: <AboutSection/>,
 	},
 	{
-		key: "work",
-		component: <WorkSection/>,
+		key: "faq",
+		component: <FaqSection/>,
 	},
 ];
 
@@ -30,17 +32,38 @@ export default function IndexPage() {
 	const currentSection = useCurrentSection();
 
 	return (
-		<main>
-			{sections.map(({ key, component }) => (
-				<section key={key} id={key} className="px-10 sm:px-40 flex flex-col justify-around min-h-screen items-center snap-start">
-					{component}
-				</section>
-			))}
+		<>
+			<main>
+				{sections.map(({ key, component }) => (
+					<section key={key} id={key}
+									 className="sm:px-40 flex flex-col justify-around min-h-screen items-center snap-start">
+						{component}
+					</section>
+				))}
 
-			<Breadcrumbs className="sticky bottom-4 ml-4">
-				<BreadcrumbItem href="/">Home</BreadcrumbItem>
-				<BreadcrumbItem href="/currentSection">{ currentSection }</BreadcrumbItem>
-			</Breadcrumbs>
-		</main>
-	);
+				<AboutSection/>
+			</main>
+
+			<div className="sticky bottom-4 ml-4">
+				<Breadcrumb>
+					<BreadcrumbList>
+						<BreadcrumbItem>
+							<BreadcrumbLink asChild>
+								<Link href="/">Home</Link>
+							</BreadcrumbLink>
+						</BreadcrumbItem>
+						<BreadcrumbSeparator>
+							<SlashIcon/>
+						</BreadcrumbSeparator>
+						<BreadcrumbItem>
+							<BreadcrumbLink asChild>
+								<Link href="/currentSection">{currentSection}</Link>
+							</BreadcrumbLink>
+						</BreadcrumbItem>
+					</BreadcrumbList>
+				</Breadcrumb>
+			</div>
+		</>
+	)
+		;
 }

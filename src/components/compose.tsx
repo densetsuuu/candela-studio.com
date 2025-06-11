@@ -1,8 +1,6 @@
 "use client";
 
-import { NextUIProvider } from "@nextui-org/react";
-
-export const providers: ComposeProps["providers"] = [NextUIProvider];
+export const providers: ComposeProps["providers"] = [];
 
 export interface ComposeProps {
 	providers: React.FC<{ children: React.ReactNode | React.ReactNode[] }>[];

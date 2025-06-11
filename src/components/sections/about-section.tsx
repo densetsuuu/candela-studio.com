@@ -1,34 +1,55 @@
-import Image from "next/image"
-import { Stepper, Step } from "./about/stepper"
+import {
+	Timeline,
+	TimelineHeader,
+	TimelineIndicator,
+	TimelineItem,
+	TimelineSeparator,
+	TimelineTitle,
+} from "@/components/ui/timeline"
 
-const steps: Step[] = [
-    {
-        company: "onepoint",
-        period: ["2023", "2024"],
-        title: "Full Stack Developper",
-        description: "MADPS"
-    },
-    {
-        company: "onepoint",
-        period: ["2023"],
-        title: "Full Stack Developper",
-        description: "OPDC"
-    },
-    {
-        company: "Freelance",
-        period: ["2022"],
-        title: "Java (Forge/Spigot)",
-        description: ""
-    },
+const items = [
+	{
+		id: 1,
+		date: "Mar 15, 2024",
+		title: "Project Kickoff",
+		description:
+			"Initial team meeting and project scope definition. Established key milestones and resource allocation.",
+	},
+	{
+		id: 2,
+		date: "Mar 22, 2024",
+		title: "Design Phase",
+		description:
+			"Completed wireframes and user interface mockups. Stakeholder review and feedback incorporated.",
+	},
+	{
+		id: 3,
+		date: "Apr 5, 2024",
+		title: "Development Sprint",
+		description:
+			"Backend API implementation and frontend component development in progress.",
+	},
+	{
+		id: 4,
+		date: "Apr 19, 2024",
+		title: "Testing & Deployment",
+		description:
+			"Quality assurance testing, performance optimization, and production deployment preparation.",
+	},
 ]
 
-export const AboutSection = () => {
-    return (
-        <div className="flex flex-row min-w-full justify-evenly">
-            <Image className="grayscale" src="/images/career.jpeg" width={250} height={250} alt="career"/>
-            <div className="career mt-8">
-                <Stepper steps={steps} color="bg-[#2E2E2E]"/>
-            </div>
-        </div>
-    )
+export function AboutSection() {
+	return (
+		<Timeline defaultValue={3}>
+			{items.map((item) => (
+				<TimelineItem key={item.id} step={item.id}>
+					<TimelineHeader>
+						<TimelineSeparator/>
+						<TimelineTitle className="-mt-0.5">{item.title}</TimelineTitle>
+						<TimelineIndicator/>
+					</TimelineHeader>
+				</TimelineItem>
+			))}
+		</Timeline>
+	)
 }

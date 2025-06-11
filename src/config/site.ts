@@ -3,16 +3,15 @@ import { BackgroundConfig, NavConfig, NavItem, SiteConfig } from "@/types";
 
 //#region SiteConfig
 export const siteConfig: SiteConfig = {
-	title: "Portfolio",
+	title: "Candela Studio",
 	description:
-		"My open source portfolio crafted with NextJS, Shadcn/UI, and Bun.",
+		"My open source website crafted with NextJS and Shadcn/UI.",
 	author: "Raphael ALARCON",
 	url: "",
 	email: "raph.alarcon1@gmail.com",
 	logo: "",
 	links: {
-		twitter: "https://twitter.com/SalutCDensetsu",
-		github: "https://github.com/raphael-alarcon",
+		github: "https://github.com/densetsuuu",
 		linkedin: "https://www.linkedin.com/in/raphael-alarcon/",
 	},
 };
@@ -20,7 +19,7 @@ export const siteConfig: SiteConfig = {
 
 //#region Navigation
 export const logoConfig: NavItem = {
-	title: "Raphaël Alarçon",
+	title: "Candela Studio",
 	href: "#home",
 };
 

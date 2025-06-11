@@ -6,7 +6,6 @@ export type SiteConfig = {
 	email: string;
 	logo: string;
 	links: {
-		twitter: string;
 		github: string;
 		linkedin: string;
 	};
