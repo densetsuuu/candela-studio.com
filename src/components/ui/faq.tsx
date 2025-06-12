@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
-import { ChevronDown, Mail } from "lucide-react";
-import { cn } from "@/lib/utils";
+import {useState} from "react";
+import {AnimatePresence, motion} from "motion/react";
+import {ChevronDown, Mail} from "lucide-react";
+import {cn} from "@/lib/utils";
 
 interface FAQItemProps {
 	question: string;
@@ -11,20 +11,20 @@ interface FAQItemProps {
 	index: number;
 }
 
-export function FAQItem({ question, answer, index }: FAQItemProps) {
+export function FAQItem({question, answer, index}: FAQItemProps) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
 		<motion.div
-			initial={{ opacity: 0, y: 10 }}
-			animate={{ opacity: 1, y: 0 }}
+			initial={{opacity: 0, y: 10}}
+			animate={{opacity: 1, y: 0}}
 			transition={{
 				duration: 0.3,
 				delay: index * 0.15,
 				ease: "easeOut",
 			}}
 			className={cn(
-				"group rounded-lg border-[0.5px] border-gray-200/50 dark:border-gray-800/50",
+				"group rounded-lg border-[1px] border-gray-200/80 dark:border-gray-800/50",
 				"transition-all duration-200 ease-in-out",
 				isOpen
 					? "bg-linear-to-br from-white via-gray-50/50 to-white dark:from-white/5 dark:via-white/2 dark:to-white/5"
@@ -34,7 +34,7 @@ export function FAQItem({ question, answer, index }: FAQItemProps) {
 			<button
 				type="button"
 				onClick={() => setIsOpen(!isOpen)}
-				className="w-full px-6 py-4 flex items-center justify-between gap-4"
+				className="w-full px-6 py-4 flex items-center justify-between gap-4 cursor-pointer"
 			>
 				<h3
 					className={cn(
@@ -68,7 +68,7 @@ export function FAQItem({ question, answer, index }: FAQItemProps) {
 			<AnimatePresence initial={false}>
 				{isOpen && (
 					<motion.div
-						initial={{ height: 0, opacity: 0 }}
+						initial={{height: 0, opacity: 0}}
 						animate={{
 							height: "auto",
 							opacity: 1,
@@ -99,9 +99,9 @@ export function FAQItem({ question, answer, index }: FAQItemProps) {
 					>
 						<div className="px-6 pb-4 pt-2">
 							<motion.p
-								initial={{ y: -8, opacity: 0 }}
-								animate={{ y: 0, opacity: 1 }}
-								exit={{ y: -8, opacity: 0 }}
+								initial={{y: -8, opacity: 0}}
+								animate={{y: 0, opacity: 1}}
+								exit={{y: -8, opacity: 0}}
 								transition={{
 									duration: 0.3,
 									ease: "easeOut",
@@ -143,9 +143,9 @@ function Faq02() {
 			className="py-16 w-full bg-linear-to-b from-transparent via-gray-50/50 to-transparent dark:from-transparent dark:via-white/[0.02] dark:to-transparent">
 			<div className="container px-4 mx-auto">
 				<motion.div
-					initial={{ opacity: 0, y: 20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.5 }}
+					initial={{opacity: 0, y: 20}}
+					animate={{opacity: 1, y: 0}}
+					transition={{duration: 0.5}}
 					className="max-w-2xl mx-auto text-center mb-12"
 				>
 					<h2
@@ -164,9 +164,9 @@ function Faq02() {
 				</div>
 
 				<motion.div
-					initial={{ opacity: 0, y: 20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.5, delay: 0.3 }}
+					initial={{opacity: 0, y: 20}}
+					animate={{opacity: 1, y: 0}}
+					transition={{duration: 0.5, delay: 0.3}}
 					className={cn(
 						"max-w-md mx-auto mt-12 p-6 rounded-lg text-center"
 					)}

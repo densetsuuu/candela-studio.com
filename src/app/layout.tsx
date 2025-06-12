@@ -1,13 +1,14 @@
 //#region Imports
 import "./globals.css";
-import type { Metadata } from "next";
-import { siteConfig } from "@/config/site";
+import type {Metadata} from "next";
+import {siteConfig} from "@/config/site";
 
 import localFont from "next/font/local";
-import { Inter } from "next/font/google";
-import { cn } from "@/lib/utils";
-import { NavMenu } from "@components/nav-menu";
-import { ThemeProvider } from "@components/theme-provider";
+import {Inter} from "next/font/google";
+import {cn} from "@/lib/utils";
+import {NavMenu} from "@components/nav-menu";
+import {ThemeProvider} from "@components/theme-provider";
+import React from "react";
 //#endregion
 
 //#region Fonts
@@ -41,12 +42,12 @@ export const metadata: Metadata = {
 	},
 };
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({children}: RootLayoutProps) {
 	return (
 		<html lang="en" suppressHydrationWarning>
 		<body
 			className={cn(
-				"antialiased font-sans",
+				"antialiased font-sans bg-background text-foreground overscroll-none",
 				fontHeading.variable,
 				fontSans.variable
 			)}>
@@ -57,8 +58,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
 			disableTransitionOnChange
 		>
 			<div className="font-sans">
-				<NavMenu/>
-				{children}
+				<div
+					className="absolute top-0 z-[-2] h-screen w-screen bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]">
+					<NavMenu/>
+					{children}
+				</div>
 			</div>
 		</ThemeProvider>
 		</body>

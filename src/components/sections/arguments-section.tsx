@@ -1,12 +1,14 @@
-import { cn } from "@/lib/utils";
-import { ArgumentCard } from "@components/sections/arguments/argument-card";
-import { Mail } from "lucide-react";
+import {cn} from "@/lib/utils";
+import {ArgumentCard} from "@components/sections/arguments/argument-card";
+import {Mail} from "lucide-react";
 import NeumorphEyebrow from "@ui/neumorph-eyebrow";
+import {SectionTitle} from "@components/section-title";
+import {SectionDescription} from "@components/section-description";
 
 export function ArgumentsSection() {
 
 	return (
-		<div className="relative flex h-screen w-full items-center justify-center bg-white dark:bg-black">
+		<div className="relative flex h-screen w-full items-center justify-center bg-background/10">
 			<div
 				className={cn(
 					"absolute inset-0",
@@ -16,14 +18,12 @@ export function ArgumentsSection() {
 				)}
 			/>
 			<div
-				className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
-			<div className="flex flex-col items-center z-20 text-center justify-start">
+				className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
+			<div className="flex flex-col items-center z-20 text-center justify-start gap-4">
 				<NeumorphEyebrow intent="primary" className="text-2xl">Pourquoi choisir Candela Studio ?</NeumorphEyebrow>
-				<h1 className="text-3xl leading-20">Une lumière claire pour guider vos projets numériques</h1>
-				<p>Chez Candela Studio, nous pensons que la lumière n’est pas qu’un symbole : c’est une approche.
-					Clarté
-					stratégique, rigueur technique et transmission fluide sont les trois piliers de notre méthode. Résultat : des
-					projets numériques qui illuminent votre vision et captivent votre audience.</p>
+				<SectionTitle>Une lumière claire pour guider vos projets numériques</SectionTitle>
+				<SectionDescription className="w-2/3">Chez Candela Studio, nous pensons que la lumière n’est pas qu’un symbole : c’est une
+					approche.</SectionDescription>
 
 				<div className="flex flex-row flex-wrap gap-3 my-6">
 					<ArgumentCard title={"test"} description={"test"}>
