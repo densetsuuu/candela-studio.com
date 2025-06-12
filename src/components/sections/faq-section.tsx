@@ -1,44 +1,33 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion"
+import NeumorphEyebrow from "@ui/neumorph-eyebrow";
+import { FAQItem } from "@ui/faq";
 
 export const FaqSection = () => {
 	const faqs = [
 		{
-			question: "What is a FAQ?",
+			question: "Quels types de projets réalisez-vous ?",
 			answer:
-				"A FAQ is a list of frequently asked questions and answers on a particular topic.",
+				"Je travaille principalement sur le développement de sites web, d’applications web (frontend et/ou backend), de sites e-commerce, et d’applications mobiles. Que ce soit pour créer un projet de A à Z ou intervenir sur un projet existant, je m’adapte à vos besoins.",
 		},
 		{
-			question: "What is the purpose of a FAQ?",
+			question: "Proposez-vous un suivi ou une maintenance après livraison ?\n",
 			answer:
-				"The purpose of a FAQ is to provide answers to common questions and help users find the information they need quickly and easily.",
+				"Bien sûr ! Je propose des services de maintenance et de suivi pour m'assurer que votre projet fonctionne parfaitement après sa livraison. Cela inclut les mises à jour, la correction de bugs et l'ajout de nouvelles fonctionnalités si nécessaire.",
 		},
 		{
-			question: "How do I create a FAQ?",
+			question: "Travaillez-vous à distance ou sur site ?",
 			answer:
-				"To create a FAQ, you need to compile a list of common questions and answers on a particular topic and organize them in a clear and easy-to-navigate format.",
-		},
-		{
-			question: "What are the benefits of a FAQ?",
-			answer:
-				"The benefits of a FAQ include providing quick and easy access to information, reducing the number of support requests, and improving the overall user experience.",
+				"Je travaille principalement à distance, ce qui me permet de collaborer avec des clients partout en France (et au-delà). Des déplacements ponctuels peuvent être envisagés selon les besoins.",
 		},
 	]
 
 	return (
-		<div className="container">
-			<h1 className="mb-4 text-3xl md:mb-11 md:text-3xl text-center">
-				Frequently asked questions
-			</h1>
-			{faqs.map((faq, index) => (
-				<Accordion key={index} type="single" collapsible>
-					<AccordionItem value={`item-${index}`}>
-						<AccordionTrigger className="hover:text-foreground/60 hover:no-underline">
-							{faq.question}
-						</AccordionTrigger>
-						<AccordionContent>{faq.answer}</AccordionContent>
-					</AccordionItem>
-				</Accordion>
-			))}
+		<div className="flex flex-col items-center max-w-xl">
+			<NeumorphEyebrow intent="primary" className="text-2xl">FAQ</NeumorphEyebrow>
+			<div className="w-[800px] space-y-5">
+				{faqs.map((faq, index) => (
+					<FAQItem question={faq.question} answer={faq.answer} index={index} key={index}/>
+				))}
+			</div>
 		</div>
 	)
 }

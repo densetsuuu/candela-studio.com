@@ -1,6 +1,6 @@
 "use client";
 
-import { AboutSection } from "@/components/sections/about-section";
+import { AboutSection } from "@components/sections/about-section";
 import { HeroSection } from "@components/sections/hero-section";
 import useCurrentSection from "@/hooks/use-current-section";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@ui/breadcrumb";
@@ -16,7 +16,7 @@ type Section = {
 
 const sections: Section[] = [
 	{
-		key: "home",
+		key: "expertise",
 		component: <HeroSection/>,
 	},
 	{
@@ -41,13 +41,29 @@ export default function IndexPage() {
 			<main>
 				{sections.map(({ key, component }) => (
 					<section key={key} id={key}
-									 className="sm:px-40 flex flex-col justify-around min-h-screen items-center">
+									 className="sm:px-40 flex flex-col justify-evenly min-h-screen items-center">
 						{component}
 					</section>
 				))}
 			</main>
 
-			<div className="sticky bottom-4 ml-4">
+			<footer className="w-full grid place-items-center">
+				<div className="px-8 flex flex-row items-center justify-between w-full h-6">
+					<p className="text-sm text-gray-500 dark:text-gray-400">
+						© {new Date().getFullYear()} Candela Studio. All rights reserved.
+					</p>
+					<div className="inline-flex gap-4">
+						<a className="text-xs text-gray-500 dark:text-gray-400">
+							Politique de confidentialité
+						</a>
+						<a className="text-xs text-gray-500 dark:text-gray-400">
+							Conditions d&apos;utilisation
+						</a>
+					</div>
+				</div>
+			</footer>
+
+			<div className="sticky bottom-12 ml-4 w-fit">
 				<Breadcrumb>
 					<BreadcrumbList>
 						<BreadcrumbItem>

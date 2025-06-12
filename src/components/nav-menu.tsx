@@ -21,28 +21,28 @@ export const NavMenu = (props: NavigationMenuProps) => {
 			<NavigationMenuList className="gap-0 space-x-0 text-sm hidden md:flex">
 				<NavigationMenuItem>
 					<Button variant="link" asChild className="text-inherit">
-						<Link href="#home">home</Link>
+						<Link href="#home">Expertise</Link>
 					</Button>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
 					<Button variant="link" asChild className="text-inherit">
-						<Link href="#about">about</Link>
+						<Link href="#about">À propos</Link>
 					</Button>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
 					<Button variant="link" asChild className="text-inherit">
-						<Link href="#faq">faq</Link>
+						<Link href="#faq">FAQ</Link>
 					</Button>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
 					<Button variant="link" asChild className="text-inherit">
-						<Link href="#contact">contact</Link>
+						<Link href="#contact">Contact</Link>
 					</Button>
 				</NavigationMenuItem>
 			</NavigationMenuList>
 			<NavigationMenuList className="w-36 flex justify-center">
 				<NavigationMenuItem>
-					<Button className="rounded-none">
+					<Button>
 						Recevoir un devis <ArrowUpRight/>
 					</Button>
 				</NavigationMenuItem>

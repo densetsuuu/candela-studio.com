@@ -6,10 +6,10 @@ import { ArrowUpRight } from "lucide-react";
 export function CallToAction() {
 	return (
 		<div className="flex gap-5">
-			<Button className="rounded-none" size="lg">
+			<Button size="lg">
 				Recevoir un devis <ArrowUpRight/>
 			</Button>
-			<Button variant="outline" className="rounded-none" size="lg">
+			<Button variant="outline" size="lg">
 				Nous contacter
 			</Button>
 		</div>

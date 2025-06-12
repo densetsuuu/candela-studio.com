@@ -1,59 +1,23 @@
-import {
-	Timeline,
-	TimelineDate,
-	TimelineHeader,
-	TimelineIndicator,
-	TimelineItem,
-	TimelineSeparator,
-	TimelineTitle,
-} from "@/components/ui/timeline"
-
-const items = [
-	{
-		id: 1,
-		date: "Mar 15, 2024",
-		title: "Project Kickoff",
-	},
-	{
-		id: 2,
-		date: "Mar 22, 2024",
-		title: "Design Phase",
-	},
-	{
-		id: 3,
-		date: "Apr 5, 2024",
-		title: "Development Sprint",
-	},
-	{
-		id: 4,
-		date: "Apr 19, 2024",
-		title: "Testing & Deployment",
-	},
-	{
-		id: 5,
-		date: "April 11, 2023",
-		title: "User Training",
-	},
-]
+import NeumorphEyebrow from "@ui/neumorph-eyebrow";
+import { Button } from "@ui/button";
+import { ArrowRight } from "lucide-react";
 
 export function AboutSection() {
+
 	return (
-		
-		<Timeline defaultValue={3} className="w-64">
-			{items.map((item) => (
-				<TimelineItem
-					key={item.id}
-					step={item.id}
-					className="w-[calc(50%-1.5rem)] odd:ms-auto even:text-right even:group-data-[orientation=vertical]/timeline:ms-0 even:group-data-[orientation=vertical]/timeline:me-8 even:group-data-[orientation=vertical]/timeline:**:data-[slot=timeline-indicator]:-right-6 even:group-data-[orientation=vertical]/timeline:**:data-[slot=timeline-indicator]:left-auto even:group-data-[orientation=vertical]/timeline:**:data-[slot=timeline-indicator]:translate-x-1/2 even:group-data-[orientation=vertical]/timeline:**:data-[slot=timeline-separator]:-right-6 even:group-data-[orientation=vertical]/timeline:**:data-[slot=timeline-separator]:left-auto even:group-data-[orientation=vertical]/timeline:**:data-[slot=timeline-separator]:translate-x-1/2"
-				>
-					<TimelineHeader>
-						<TimelineSeparator/>
-						<TimelineDate>{item.date}</TimelineDate>
-						<TimelineTitle>{item.title}</TimelineTitle>
-						<TimelineIndicator/>
-					</TimelineHeader>
-				</TimelineItem>
-			))}
-		</Timeline>
+		<div className="flex flex-row gap-20">
+			<div className="w-[400px] h-[500px] bg-slate-200 rounded-xl">
+			</div>
+			<div className="w-80 flex flex-col gap-8">
+				<NeumorphEyebrow intent="primary">A propos</NeumorphEyebrow>
+				<h1 className="text-3xl">Derrière le studio, une vision claire</h1>
+				<p>Je suis un développeur passionné, curieux et rigoureux, animé par l’envie de transformer les idées en
+					expériences numériques claires, efficaces et durables.</p>
+				<Button className="w-fit">
+					Me contacter
+					<ArrowRight className="size-4"/>
+				</Button>
+			</div>
+		</div>
 	)
 }
