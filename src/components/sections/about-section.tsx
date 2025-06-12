@@ -7,7 +7,7 @@ import {SectionDescription} from "@components/section-description";
 export function AboutSection() {
 
 	return (
-		<div className="flex flex-row gap-20">
+		<div className="flex flex-col gap-20 md:flex-row">
 			<div className="w-[400px] h-[500px] bg-slate-200 rounded-xl">
 			</div>
 			<div className="w-80 flex flex-col gap-8">

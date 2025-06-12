@@ -1,82 +1,64 @@
 "use client";
 
-import { Button } from "@ui/button";
-import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, } from "@ui/navigation-menu";
-import { cn } from "@/lib/utils";
-import { NavigationMenuProps } from "@radix-ui/react-navigation-menu";
-import { ArrowUpRight, LucideIcon } from "lucide-react";
-import Link from "next/link";
+import {NavigationMenuProps} from "@radix-ui/react-navigation-menu";
 import React from "react";
-import { Icons } from "@components/icons";
-import { ToggleTheme } from "@components/toggle-theme";
+import {cn} from "@/lib/utils";
+import {Navbar as NavbarComponent, NavbarCenter, NavbarLeft, NavbarRight} from "@ui/navbar";
+import {Icons} from "@components/icons";
+import {NavigationMenu, NavigationMenuItem, NavigationMenuList} from "@ui/navigation-menu";
+import {ToggleTheme} from "@components/toggle-theme";
+import {Button} from "@ui/button";
+import {ArrowUpRight} from "lucide-react";
+import Link from "next/link";
 
 export const NavMenu = (props: NavigationMenuProps) => {
 	return (
-		<NavigationMenu className="sticky top-0 h-20 max-w-full justify-around" {...props}>
-			<NavigationMenuList className="w-36">
-				<NavigationMenuItem>
-					<Icons.logo className="size-10 fill-black dark:fill-white"/>
-				</NavigationMenuItem>
-			</NavigationMenuList>
-			<NavigationMenuList className="gap-0 space-x-0 text-sm hidden md:flex">
-				<NavigationMenuItem>
-					<Button variant="link" asChild className="text-inherit">
-						<Link href="#home">Expertise</Link>
-					</Button>
-				</NavigationMenuItem>
-				<NavigationMenuItem>
-					<Button variant="link" asChild className="text-inherit">
-						<Link href="#about">À propos</Link>
-					</Button>
-				</NavigationMenuItem>
-				<NavigationMenuItem>
-					<Button variant="link" asChild className="text-inherit">
-						<Link href="#faq">FAQ</Link>
-					</Button>
-				</NavigationMenuItem>
-				<NavigationMenuItem>
-					<Button variant="link" asChild className="text-inherit">
-						<Link href="#contact">Contact</Link>
-					</Button>
-				</NavigationMenuItem>
-			</NavigationMenuList>
-			<NavigationMenuList className="w-36 flex justify-center">
-				<NavigationMenuItem>
-					<Button>
-						Recevoir un devis <ArrowUpRight/>
-					</Button>
-				</NavigationMenuItem>
-				<NavigationMenuItem>
-					<ToggleTheme/>
-				</NavigationMenuItem>
-			</NavigationMenuList>
-		</NavigationMenu>
+		<header className={cn("sticky top-0 z-50 -mb-4 px-4 pb-4")}>
+			<div className="fade-bottom bg-background/15 absolute left-0 h-18 w-full backdrop-blur-lg"></div>
+			<div className="max-w-container relative mx-20">
+				<NavbarComponent>
+					<NavbarLeft className="w-1/3">
+						<a
+							href="#expertise"
+							className="flex items-center gap-2 text-xl font-bold"
+						>
+							<Icons.logo className="size-10 fill-black dark:fill-white"/>
+						</a>
+					</NavbarLeft>
+					<NavbarCenter className="w-1/3 hidden lg:flex">
+						<NavigationMenu>
+							<NavigationMenuList>
+								<NavigationMenuItem>
+									<Button variant="link" asChild className="text-inherit">
+										<Link href="#home">Expertise</Link>
+									</Button>
+								</NavigationMenuItem>
+								<NavigationMenuItem>
+									<Button variant="link" asChild className="text-inherit">
+										<Link href="#about">À propos</Link>
+									</Button>
+								</NavigationMenuItem>
+								<NavigationMenuItem>
+									<Button variant="link" asChild className="text-inherit">
+										<Link href="#faq">FAQ</Link>
+									</Button>
+								</NavigationMenuItem>
+								<NavigationMenuItem>
+									<Button variant="link" asChild className="text-inherit">
+										<Link href="#contact">Contact</Link>
+									</Button>
+								</NavigationMenuItem>
+							</NavigationMenuList>
+						</NavigationMenu>
+					</NavbarCenter>
+					<NavbarRight className="w-1/3">
+						<Button>
+							Recevoir un devis <ArrowUpRight/>
+						</Button>
+						<ToggleTheme/>
+					</NavbarRight>
+				</NavbarComponent>
+			</div>
+		</header>
 	);
 }
-
-const ListItem = React.forwardRef<
-	React.ElementRef<typeof Link>,
-	React.ComponentPropsWithoutRef<typeof Link> & { icon: LucideIcon }
->(({ className, title, children, ...props }, ref) => {
-	return (
-		<li>
-			<NavigationMenuLink asChild>
-				<Link
-					ref={ref}
-					className={cn(
-						"block select-none space-y-2 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-						className
-					)}
-					{...props}
-				>
-					<props.icon className="mb-4 h-6 w-6"/>
-					<div className="text-sm font-semibold leading-none">{title}</div>
-					<p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-						{children}
-					</p>
-				</Link>
-			</NavigationMenuLink>
-		</li>
-	);
-});
-ListItem.displayName = "ListItem";

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 
 export default function useCurrentSection() {
 	const [currentSection, setCurrentSection] = useState<string>("home");
@@ -8,7 +8,7 @@ export default function useCurrentSection() {
 		const section = sections.find((section) => {
 			const element = document.getElementById(section);
 			if (element) {
-				const { offsetTop, offsetHeight } = element;
+				const {offsetTop, offsetHeight} = element;
 				return (
 					scrollPosition >= offsetTop &&
 					scrollPosition < offsetTop + offsetHeight
@@ -23,6 +23,6 @@ export default function useCurrentSection() {
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
+	}, [handleScroll]);
 	return currentSection.toFilmCase();
 }

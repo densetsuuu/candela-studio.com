@@ -25,7 +25,7 @@ export function ArgumentsSection() {
 				<SectionDescription className="w-2/3">Chez Candela Studio, nous pensons que la lumière n’est pas qu’un symbole : c’est une
 					approche.</SectionDescription>
 
-				<div className="flex flex-row flex-wrap gap-3 my-6">
+				<div className="flex flex-row flex-wrap gap-3 my-6 items-center justify-center">
 					<ArgumentCard title={"test"} description={"test"}>
 						<Mail className="size-10 dark:fill-neutral-200"/>
 					</ArgumentCard>

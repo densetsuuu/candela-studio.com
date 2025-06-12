@@ -1,13 +1,10 @@
 "use client";
 
-import { AboutSection } from "@components/sections/about-section";
-import { HeroSection } from "@components/sections/hero-section";
+import {AboutSection} from "@components/sections/about-section";
+import {HeroSection} from "@components/sections/hero-section";
 import useCurrentSection from "@/hooks/use-current-section";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@ui/breadcrumb";
-import Link from "next/link";
-import { SlashIcon } from "lucide-react";
-import { FaqSection } from "@components/sections/faq-section";
-import { ArgumentsSection } from "@components/sections/arguments-section";
+import {FaqSection} from "@components/sections/faq-section";
+import {ArgumentsSection} from "@components/sections/arguments-section";
 
 type Section = {
 	key: string;
@@ -39,9 +36,9 @@ export default function IndexPage() {
 	return (
 		<>
 			<main>
-				{sections.map(({ key, component }) => (
+				{sections.map(({key, component}) => (
 					<section key={key} id={key}
-									 className="sm:px-40 flex flex-col justify-evenly min-h-screen items-center">
+							 className="sm:px-40 flex flex-col justify-evenly min-h-screen items-center">
 						{component}
 					</section>
 				))}
@@ -62,26 +59,6 @@ export default function IndexPage() {
 					</div>
 				</div>
 			</footer>
-
-			<div className="sticky bottom-12 ml-4 w-fit">
-				<Breadcrumb>
-					<BreadcrumbList>
-						<BreadcrumbItem>
-							<BreadcrumbLink asChild>
-								<Link href="/">Candela Studio</Link>
-							</BreadcrumbLink>
-						</BreadcrumbItem>
-						<BreadcrumbSeparator>
-							<SlashIcon/>
-						</BreadcrumbSeparator>
-						<BreadcrumbItem>
-							<BreadcrumbLink asChild>
-								<Link href="/currentSection">{currentSection}</Link>
-							</BreadcrumbLink>
-						</BreadcrumbItem>
-					</BreadcrumbList>
-				</Breadcrumb>
-			</div>
 		</>
 	)
 		;
