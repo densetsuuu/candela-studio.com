@@ -1,23 +1,23 @@
 "use client";
 
-import {NavigationMenuProps} from "@radix-ui/react-navigation-menu";
+import { NavigationMenuProps } from "@radix-ui/react-navigation-menu";
 import React from "react";
-import {cn} from "@/lib/utils";
-import {Navbar as NavbarComponent, NavbarCenter, NavbarLeft, NavbarRight} from "@ui/navbar";
-import {Icons} from "@components/icons";
-import {NavigationMenu, NavigationMenuItem, NavigationMenuList} from "@ui/navigation-menu";
-import {ToggleTheme} from "@components/toggle-theme";
-import {Button} from "@ui/button";
-import {ArrowUpRight} from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Navbar as NavbarComponent, NavbarCenter, NavbarLeft, NavbarRight } from "@ui/navbar";
+import { Icons } from "@components/icons";
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@ui/navigation-menu";
+import { ToggleTheme } from "@components/toggle-theme";
+import { Button } from "@ui/button";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 export const NavMenu = (props: NavigationMenuProps) => {
 	return (
-		<header className={cn("sticky top-0 z-50 -mb-4 px-4 pb-4")}>
+		<header className={cn("sticky top-0 z-50")}>
 			<div className="fade-bottom bg-background/15 absolute left-0 h-18 w-full backdrop-blur-lg"></div>
-			<div className="max-w-container relative mx-20">
+			<div className="max-w-container relative mx-5 md:mx-20">
 				<NavbarComponent>
-					<NavbarLeft className="w-1/3">
+					<NavbarLeft className="w-1/2 md:w-1/3">
 						<a
 							href="#expertise"
 							className="flex items-center gap-2 text-xl font-bold"
@@ -51,7 +51,7 @@ export const NavMenu = (props: NavigationMenuProps) => {
 							</NavigationMenuList>
 						</NavigationMenu>
 					</NavbarCenter>
-					<NavbarRight className="w-1/3">
+					<NavbarRight className="w-1/2 md:w-1/3">
 						<Button>
 							Recevoir un devis <ArrowUpRight/>
 						</Button>

@@ -1,13 +1,13 @@
 //#region Imports
 import "./globals.css";
-import type {Metadata} from "next";
-import {siteConfig} from "@/config/site";
+import type { Metadata } from "next";
+import { siteConfig } from "@/config/site";
 
 import localFont from "next/font/local";
-import {Inter} from "next/font/google";
-import {cn} from "@/lib/utils";
-import {NavMenu} from "@components/nav-menu";
-import {ThemeProvider} from "@components/theme-provider";
+import { Inter } from "next/font/google";
+import { cn } from "@/lib/utils";
+import { NavMenu } from "@components/nav-menu";
+import { ThemeProvider } from "@components/theme-provider";
 import React from "react";
 //#endregion
 
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 	},
 };
 
-export default function RootLayout({children}: RootLayoutProps) {
+export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<html lang="en" suppressHydrationWarning>
 		<body
@@ -59,10 +59,9 @@ export default function RootLayout({children}: RootLayoutProps) {
 		>
 			<div className="font-sans">
 				<div
-					className="absolute top-0 z-[-2] h-screen w-screen bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]">
-					<NavMenu/>
-					{children}
-				</div>
+					className="absolute inset-0 z-[-2] h-screen w-full bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]"></div>
+				<NavMenu/>
+				{children}
 			</div>
 		</ThemeProvider>
 		</body>

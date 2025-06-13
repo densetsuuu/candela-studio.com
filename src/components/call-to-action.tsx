@@ -1,7 +1,7 @@
 "use client";
 
-import {Button} from "@ui/button";
-import {ArrowUpRight} from "lucide-react";
+import { Button } from "@ui/button";
+import { ArrowUpRight } from "lucide-react";
 
 export function CallToAction() {
 	return (

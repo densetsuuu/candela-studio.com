@@ -1,7 +1,7 @@
 import NeumorphEyebrow from "@ui/neumorph-eyebrow";
-import {FAQItem} from "@ui/faq";
-import {SectionTitle} from "@components/section-title";
-import {SectionDescription} from "@components/section-description";
+import { FAQItem } from "@ui/faq";
+import { SectionTitle } from "@components/section-title";
+import { SectionDescription } from "@components/section-description";
 
 export const FaqSection = () => {
 	const faqs = [
@@ -23,13 +23,13 @@ export const FaqSection = () => {
 	]
 
 	return (
-		<div className="flex flex-col items-center max-w-xl gap-4 max-h-204 max-w-">
+		<div className="flex flex-col items-center gap-4">
 			<NeumorphEyebrow intent="primary" className="text-2xl">FAQ</NeumorphEyebrow>
 			<SectionTitle>Questions fréquentes</SectionTitle>
 			<SectionDescription className="text-center">
 				Trouvez ici les réponses aux questions les plus courantes sur mes services de développement web et mobile.
 			</SectionDescription>
-			<div className="w-2/3 md:w-100 space-y-5 mt-4 ">
+			<div className="space-y-5 mt-4 w-sm md:w-3xl max-h-10">
 				{faqs.map((faq, index) => (
 					<FAQItem question={faq.question} answer={faq.answer} index={index} key={index}/>
 				))}
