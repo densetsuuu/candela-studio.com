@@ -29,7 +29,7 @@ export const FaqSection = () => {
 			<SectionDescription className="text-center">
 				Trouvez ici les réponses aux questions les plus courantes sur mes services de développement web et mobile.
 			</SectionDescription>
-			<div className="space-y-5 mt-4 w-sm md:w-3xl max-h-10">
+			<div className="space-y-5 mt-4 w-sm md:w-3xl px-4 xs:px-0">
 				{faqs.map((faq, index) => (
 					<FAQItem question={faq.question} answer={faq.answer} index={index} key={index}/>
 				))}

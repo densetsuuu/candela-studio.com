@@ -26,7 +26,7 @@ export function ArgumentsSection() {
 					Une lumière claire pour guider vos projets numériques
 				</SectionTitle>
 
-				<SectionDescription className="max-w-xl">
+				<SectionDescription>
 					Chez Candela Studio, nous pensons que la lumière n’est pas qu’un symbole : c’est une approche.
 				</SectionDescription>
 
