@@ -4,6 +4,8 @@ import { ArrowRight } from "lucide-react";
 import { SectionTitle } from "@components/section-title";
 import { SectionDescription } from "@components/section-description";
 import { Avatar, AvatarImage } from "@ui/avatar";
+import Link from "next/link";
+import React from "react";
 
 export function AboutSection() {
 	return (
@@ -27,9 +29,11 @@ export function AboutSection() {
 					</p>
 				</div>
 			</div>
-			<Button className="w-2/3 md:w-fit">
-				Me contacter
-				<ArrowRight className="size-4 ml-2"/>
+			<Button className="w-2/3 md:w-fit" asChild>
+				<Link href="#contact">
+					Nous contacter
+					<ArrowRight className="size-4 ml-2"/>
+				</Link>
 			</Button>
 		</div>
 	)

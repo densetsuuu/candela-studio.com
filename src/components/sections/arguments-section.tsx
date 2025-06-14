@@ -23,7 +23,7 @@ export function ArgumentsSection() {
 				</NeumorphEyebrow>
 
 				<SectionTitle>
-					Une lumière claire pour guider vos projets numériques
+					Une approche centrée sur l&apos;expérience utilisateur
 				</SectionTitle>
 
 				<SectionDescription>

@@ -35,7 +35,7 @@ interface RootLayoutProps {
 export const metadata: Metadata = {
 	metadataBase: new URL('https://candela-studio.com'),
 	description: "Candela Studio - Développement web sur mesure, accessible et performant. Spécialisé dans la création d'applications web, le respect du RGAA, et l'optimisation SEO.",
-	title: "Candela Studio",
+	title: "Candela Studio - Développement web",
 	authors: {
 		name: "Raphaël Alarçon",
 		url: "https://github.com/densetsuuu",

@@ -16,10 +16,11 @@ export default function ContactSection() {
 	return (
 		<div className="flex flex-col w-full items-center gap-12">
 			<div className="mx-auto max-w-7xl text-center flex flex-col items-center justify-center gap-4">
-				<NeumorphEyebrow intent="primary">Me contacter</NeumorphEyebrow>
-				<SectionTitle>Donnons vie à votre projet.</SectionTitle>
+				<NeumorphEyebrow intent="primary">Nous contacter</NeumorphEyebrow>
+				<SectionTitle>Donnons vie à votre projet</SectionTitle>
 				<SectionDescription>
-					Discutons-en ensemble !
+					Discutons-en ensemble ! Nous sommes là pour vous aider à concrétiser vos idées et à créer des expériences
+					numériques
 				</SectionDescription>
 			</div>
 			<Cal namespace="30min"

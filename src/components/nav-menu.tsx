@@ -53,8 +53,10 @@ export const NavMenu = (props: NavigationMenuProps) => {
 						</NavigationMenu>
 					</NavbarCenter>
 					<NavbarRight className="w-1/2 md:w-1/3">
-						<Button>
-							Recevoir un devis <ArrowUpRight/>
+						<Button asChild>
+							<Link href="#contact">
+								Je me lance <ArrowUpRight/>
+							</Link>
 						</Button>
 						<ToggleTheme/>
 					</NavbarRight>
