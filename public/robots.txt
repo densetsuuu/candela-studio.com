@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://candela-studio.com
+
+# Sitemaps
+Sitemap: https://candela-studio.com/sitemap.xml

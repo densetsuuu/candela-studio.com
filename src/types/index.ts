@@ -9,6 +9,11 @@ export type SiteConfig = {
 		github: string;
 		linkedin: string;
 	};
+	keywords: string[];
+	robots: {
+		index: boolean;
+		follow: boolean;
+	}
 };
 
 export type NavItem = {

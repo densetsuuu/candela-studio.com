@@ -1,7 +1,6 @@
 //#region Imports
 import "./globals.css";
 import type { Metadata } from "next";
-import { siteConfig } from "@/config/site";
 
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
@@ -9,7 +8,9 @@ import { cn } from "@/lib/utils";
 import { NavMenu } from "@components/nav-menu";
 import { ThemeProvider } from "@components/theme-provider";
 import React from "react";
+
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 //#endregion
 
 //#region Fonts
@@ -32,15 +33,67 @@ interface RootLayoutProps {
 }
 
 export const metadata: Metadata = {
-	title: {
-		default: siteConfig.title,
-		template: `%s | ${siteConfig.title}`,
-	},
-	description: siteConfig.description,
+	metadataBase: new URL('https://candela-studio.com'),
+	description: "Candela Studio - Développement web sur mesure, accessible et performant. Spécialisé dans la création d'applications web, le respect du RGAA, et l'optimisation SEO.",
+	title: "Candela Studio",
 	authors: {
-		name: siteConfig.author,
-		url: "",
+		name: "Raphaël Alarçon",
+		url: "https://github.com/densetsuuu",
 	},
+	openGraph: {
+		url: "https://candela-studio.com",
+		siteName: "Candela Studio",
+		type: "website",
+		locale: "fr_FR",
+	},
+	applicationName: "Candela Studio",
+	appleWebApp: {
+		title: "Candela Studio",
+		statusBarStyle: "default",
+		capable: true
+	},
+	verification: {
+		google: 'google',
+		yandex: 'yandex',
+		yahoo: 'yahoo',
+		other: {
+			me: ['my-email', 'my-link'],
+		},
+	},
+	robots: {
+		index: true,
+		follow: true,
+		"max-image-preview": "large",
+		"max-snippet": -1,
+		"max-video-preview": -1,
+		googleBot: "index, follow"
+	},
+	keywords: [
+		"développement web",
+		"développeur web",
+		"applications web",
+		"accessibilité numérique",
+		"performance web",
+		"rgaa",
+		"mobile first",
+		"maintenance web",
+		"agence web bordeaux",
+		"agence web france",
+		"developpement mobile",
+		"ia",
+		"nextjs",
+		"seo",
+		"react",
+		"backend",
+		"frontend",
+		"referencement",
+		"intelligence artificielle",
+		"solutions personnalisées",
+		"adonisjs",
+		"freelance",
+		"agence web gradignan",
+		"agence web merignac"
+	]
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
@@ -65,6 +118,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 				{children}
 			</div>
 			<Analytics/>
+			<SpeedInsights/>
 		</ThemeProvider>
 		</body>
 		</html>
