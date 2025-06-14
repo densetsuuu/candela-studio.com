@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import { NavMenu } from "@components/nav-menu";
 import { ThemeProvider } from "@components/theme-provider";
 import React from "react";
+import { Analytics } from "@vercel/analytics/next"
 //#endregion
 
 //#region Fonts
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 				<NavMenu/>
 				{children}
 			</div>
+			<Analytics/>
 		</ThemeProvider>
 		</body>
 		</html>
