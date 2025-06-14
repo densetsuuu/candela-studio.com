@@ -38,7 +38,7 @@ const sections: Section[] = [
 export default function IndexPage() {
 	return (
 		<>
-			<main className="relative">
+			<main className="relative" id="main-content">
 				{sections.map(({ key, component }) => (
 					<section key={key} id={key}
 									 className="sm:mx-40 flex flex-col justify-evenly min-h-screen items-center">
@@ -47,7 +47,7 @@ export default function IndexPage() {
 				))}
 			</main>
 
-			<footer className="w-full grid place-items-center mt-20 xl:mt-0">
+			<footer className="w-full grid place-items-center mt-20 xl:mt-0" id="page-footer">
 				<div className="px-10 flex flex-col gap-4 md:gap-0 md:flex-row items-center justify-between w-full h-20">
 					<p className="text-sm text-gray-500 dark:text-gray-400">
 						© {new Date().getFullYear()} Candela Studio. All rights reserved.

@@ -16,7 +16,7 @@ export const NavMenu = (props: NavigationMenuProps) => {
 		<header className={cn("sticky top-0 z-50")}>
 			<div className="fade-bottom bg-background/15 absolute left-0 h-18 w-full backdrop-blur-lg"></div>
 			<div className="max-w-container relative mx-5 md:mx-20">
-				<NavbarComponent>
+				<NavbarComponent id="main-navbar">
 					<NavbarLeft className="w-1/2 md:w-1/3">
 						<a
 							href="#"
