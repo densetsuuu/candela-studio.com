@@ -2,9 +2,9 @@
 
 import { AboutSection } from "@components/sections/about-section";
 import { HeroSection } from "@components/sections/hero-section";
-import useCurrentSection from "@/hooks/use-current-section";
 import { FaqSection } from "@components/sections/faq-section";
 import { ArgumentsSection } from "@components/sections/arguments-section";
+import ContactSection from "@components/sections/contact-section";
 
 type Section = {
 	key: string;
@@ -28,11 +28,13 @@ const sections: Section[] = [
 		key: "faq",
 		component: <FaqSection/>,
 	},
+	{
+		key: "contact",
+		component: <ContactSection/>,
+	},
 ];
 
 export default function IndexPage() {
-	const currentSection = useCurrentSection();
-
 	return (
 		<>
 			<main className="relative">
@@ -44,7 +46,7 @@ export default function IndexPage() {
 				))}
 			</main>
 
-			<footer className="w-full grid place-items-center">
+			<footer className="w-full grid place-items-center mt-20 xl:mt-0">
 				<div className="px-10 flex flex-col gap-4 md:gap-0 md:flex-row items-center justify-between w-full h-20">
 					<p className="text-sm text-gray-500 dark:text-gray-400">
 						© {new Date().getFullYear()} Candela Studio. All rights reserved.

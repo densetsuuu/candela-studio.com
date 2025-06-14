@@ -10,11 +10,11 @@ export function AboutSection() {
 		<div className="w-full flex flex-col gap-8 items-center text-center md:text-left">
 			<NeumorphEyebrow intent="primary">À propos</NeumorphEyebrow>
 			<SectionTitle>Derrière le studio, une vision claire</SectionTitle>
-			<SectionDescription className="text-center italic max-w-sm md:max-w-lg">
+			<SectionDescription className="italic">
 				“Je suis un développeur passionné, curieux et rigoureux, animé par l’envie de transformer les idées en
 				expériences numériques claires, efficaces et durables.”
 			</SectionDescription>
-			<div className="flex flex-row items-center justify-center gap-4">
+			<div className="flex flex-row items-center justify-center gap-3">
 				<Avatar className="size-12">
 					<AvatarImage src="/images/portrait.jpg" draggable={false}/>
 				</Avatar>

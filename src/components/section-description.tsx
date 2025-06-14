@@ -5,7 +5,7 @@ export function SectionDescription(props: ComponentProps<"p">) {
 	return (
 		<p
 			{...props}
-			className={cn("text-md text-muted-foreground max-w-xl", props.className)}
+			className={cn("text-center text-md text-muted-foreground max-w-sm md:max-w-lg", props.className)}
 		/>
 	)
 }
