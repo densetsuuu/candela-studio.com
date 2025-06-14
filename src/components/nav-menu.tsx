@@ -19,8 +19,9 @@ export const NavMenu = (props: NavigationMenuProps) => {
 				<NavbarComponent>
 					<NavbarLeft className="w-1/2 md:w-1/3">
 						<a
-							href="#expertise"
+							href="#"
 							className="flex items-center gap-2 text-xl font-bold"
+							aria-label="Logo Candela Studio"
 						>
 							<Icons.logo className="size-10 fill-black dark:fill-white"/>
 						</a>

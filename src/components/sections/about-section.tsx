@@ -16,13 +16,13 @@ export function AboutSection() {
 			</SectionDescription>
 			<div className="flex flex-row items-center justify-center gap-3">
 				<Avatar className="size-12">
-					<AvatarImage src="/images/portrait.jpg" draggable={false}/>
+					<AvatarImage src="/images/portrait.jpg" draggable={false} alt="Avatar de Raphaël A."/>
 				</Avatar>
 				<div className="flex flex-col items-start">
-					<p className="text-md text-gray-500 dark:text-gray-200 font-semibold">
+					<p className="text-md text-gray-600 dark:text-gray-200 font-semibold">
 						Raphaël A.
 					</p>
-					<p className="text-xs text-gray-500 dark:text-gray-400">
+					<p className="text-xs text-gray-600 dark:text-gray-400">
 						CEO Candela Studio
 					</p>
 				</div>

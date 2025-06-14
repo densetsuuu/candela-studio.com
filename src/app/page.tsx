@@ -5,6 +5,7 @@ import { HeroSection } from "@components/sections/hero-section";
 import { FaqSection } from "@components/sections/faq-section";
 import { ArgumentsSection } from "@components/sections/arguments-section";
 import ContactSection from "@components/sections/contact-section";
+import Link from "next/link";
 
 type Section = {
 	key: string;
@@ -52,12 +53,12 @@ export default function IndexPage() {
 						© {new Date().getFullYear()} Candela Studio. All rights reserved.
 					</p>
 					<div className="flex flex-col md:flex-row gap-4 items-center justify-center pb-4 md:pb-0">
-						<a className="text-xs text-gray-500 dark:text-gray-400">
+						<Link className="text-xs text-gray-500 dark:text-gray-400" href="/privacy-policy">
 							Politique de confidentialité
-						</a>
-						<a className="text-xs text-gray-500 dark:text-gray-400">
+						</Link>
+						<Link className="text-xs text-gray-500 dark:text-gray-400" href="/terms-of-service">
 							Conditions d&apos;utilisation
-						</a>
+						</Link>
 					</div>
 				</div>
 			</footer>
