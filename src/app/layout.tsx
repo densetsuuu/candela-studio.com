@@ -45,6 +45,15 @@ export const metadata: Metadata = {
 		siteName: "Candela Studio",
 		type: "website",
 		locale: "fr_FR",
+		images: [
+			{
+				url: "/images/og-image.png",
+				secureUrl: "/images/og-image.png",
+				width: 1200,
+				height: 630,
+				alt: "Preview image for Candela Studio's website",
+			},
+		],
 	},
 	applicationName: "Candela Studio",
 	appleWebApp: {
