@@ -5,17 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="719c73c0-d7ab-451b-b76f-23f94d3f10c9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/custom-cursor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/call-to-action.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cta.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nav-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav-menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/presentation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/presentation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/section-description.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/section-description.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/about-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/about-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/arguments-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/arguments-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/arguments/arguments-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/arguments/arguments-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/hero-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/hero-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/toggle-theme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/toggle-theme.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/faq.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/faq.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -32,6 +48,9 @@
     &quot;accountId&quot;: &quot;83ae2a03-4d75-4080-9275-59af1d7c1ea6&quot;
   }
 }</component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -51,11 +70,15 @@
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "/Users/raphaelalarcon/WebstormProjects/candela-studio.com/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -90,7 +113,9 @@
       <updated>1750148519744</updated>
       <workItem from="1750148520946" duration="44000" />
       <workItem from="1750148572411" duration="171000" />
-      <workItem from="1750148756887" duration="1222000" />
+      <workItem from="1750148756887" duration="1394000" />
+      <workItem from="1750152560477" duration="714000" />
+      <workItem from="1750169536635" duration="18971000" />
     </task>
     <servers />
   </component>

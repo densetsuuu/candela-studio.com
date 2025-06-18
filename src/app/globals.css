@@ -13,6 +13,11 @@
         'calt' 1;
         color: hsl(var(--foreground));
         min-height: fit-content;
+        cursor: none;
+    }
+
+    a, button, .cursor-hover-target {
+        cursor: none !important;
     }
 
     :root {
@@ -89,19 +94,20 @@
 }
 
 :root {
-    --background: oklch(0.9658 0.0091 258.3355);
+    --foreground-rgb: 0, 0, 0;
+    --background: oklch(1 0 0);
     --foreground: oklch(0.1450 0 0);
     --card: oklch(1 0 0);
     --card-foreground: oklch(0.1450 0 0);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.1450 0 0);
-    --primary: oklch(0.5443 0.1370 263.5552);
+    --primary: oklch(0.2050 0 0);
     --primary-foreground: oklch(0.9850 0 0);
-    --secondary: oklch(0.7526 0.0863 357.4229);
+    --secondary: oklch(0.9700 0 0);
     --secondary-foreground: oklch(0.2050 0 0);
     --muted: oklch(0.9700 0 0);
-    --muted-foreground: oklch(0.4997 0 0);
-    --accent: oklch(0.6541 0.1512 280.0905);
+    --muted-foreground: oklch(0.5560 0 0);
+    --accent: oklch(0.9700 0 0);
     --accent-foreground: oklch(0.2050 0 0);
     --destructive: oklch(0.5770 0.2450 27.3250);
     --destructive-foreground: oklch(1 0 0);
@@ -121,7 +127,7 @@
     --sidebar-accent-foreground: oklch(0.2050 0 0);
     --sidebar-border: oklch(0.9220 0 0);
     --sidebar-ring: oklch(0.7080 0 0);
-    --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: Poppins, sans-serif;
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --radius: 0.625rem;
@@ -136,6 +142,7 @@
 }
 
 .dark {
+    --foreground-rgb: 255, 255, 255;
     --background: oklch(0.1450 0 0);
     --foreground: oklch(0.9850 0 0);
     --card: oklch(0.2050 0 0);
@@ -168,7 +175,7 @@
     --sidebar-accent-foreground: oklch(0.9850 0 0);
     --sidebar-border: oklch(0.2750 0 0);
     --sidebar-ring: oklch(0.4390 0 0);
-    --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: Poppins, sans-serif;
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --radius: 0.625rem;
@@ -234,22 +241,14 @@
     --shadow-lg: var(--shadow-lg);
     --shadow-xl: var(--shadow-xl);
     --shadow-2xl: var(--shadow-2xl);
-    --animate-orbit: orbit calc(var(--duration)*1s) linear infinite;
-  @keyframes orbit {
-  0% {
-    transform: rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
-        }
-  100% {
-    transform: rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg));
-        }
-    }
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+    * {
+        @apply border-border outline-ring/50;
     }
-  body {
-    @apply bg-background text-foreground;
+
+    body {
+        @apply bg-background text-foreground;
     }
 }
