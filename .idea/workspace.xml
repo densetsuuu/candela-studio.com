@@ -5,25 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="719c73c0-d7ab-451b-b76f-23f94d3f10c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/custom-cursor.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/call-to-action.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cta.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nav-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav-menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/presentation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/presentation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/section-description.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/section-description.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/about-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/about-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/arguments-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/arguments-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/arguments/arguments-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/arguments/arguments-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/hero-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/hero-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/toggle-theme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/toggle-theme.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/faq.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/faq.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/magicui/grid-background.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/magicui/grid-background.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +60,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.ApplicationConfigurable",
     "ts.external.directory.path": "/Users/raphaelalarcon/WebstormProjects/candela-studio.com/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -115,7 +98,7 @@
       <workItem from="1750148572411" duration="171000" />
       <workItem from="1750148756887" duration="1394000" />
       <workItem from="1750152560477" duration="714000" />
-      <workItem from="1750169536635" duration="18971000" />
+      <workItem from="1750169536635" duration="26557000" />
     </task>
     <servers />
   </component>
