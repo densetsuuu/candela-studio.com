@@ -1,10 +1,10 @@
 "use client";
 
-import {AboutSection} from "@components/sections/about-section";
 import {HeroSection} from "@components/sections/hero-section";
 import {FaqSection} from "@components/sections/faq-section";
 import {ArgumentsSection} from "@components/sections/arguments-section";
 import ContactSection from "@components/sections/contact-section";
+import {WorkSection} from "@components/sections/work-section";
 
 type Section = {
     key: string;
@@ -22,7 +22,7 @@ const sections: Section[] = [
     },
     {
         key: "about",
-        component: <AboutSection/>,
+        component: <WorkSection/>,
     },
     {
         key: "faq",
@@ -36,15 +36,12 @@ const sections: Section[] = [
 
 export default function IndexPage() {
     return (
-        <>
-            <main className="relative" id="main-content">
-                {sections.map(({key, component}) => (
-                    <section key={key} id={key} className="min-h-screen">
-                        {component}
-                    </section>
-                ))}
-            </main>
-        </>
-    )
-        ;
+        <main className="relative flex flex-col gap-40" id="main-content">
+            {sections.map(({key, component}) => (
+                <section key={key} id={key}>
+                    {component}
+                </section>
+            ))}
+        </main>
+    );
 }
