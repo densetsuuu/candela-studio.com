@@ -36,7 +36,7 @@ const sections: Section[] = [
 
 export default function IndexPage() {
     return (
-        <main className="relative flex flex-col gap-28" id="main-content">
+        <main className="relative flex flex-col gap-40" id="main-content">
             {sections.map(({key, component}) => (
                 <section key={key} id={key}>
                     {component}

@@ -1,13 +1,13 @@
 import {Card, CardContent} from "@/components/ui/card";
 import {cn} from "@/lib/utils";
-import {ArrowUpRight, Goal, RepeatIcon, SearchIcon, SlidersHorizontalIcon,} from "lucide-react";
+import {CheckCircle2, Goal, RepeatIcon, SearchIcon, SlidersHorizontalIcon,} from "lucide-react";
 
 const actions = [
     {
         title: "Comprendre vos enjeux",
         description:
             "Écoute active de vos besoins pour définir une solution qui correspond à vos attentes.",
-        href: "#",
+        href: "#contact",
         icon: SearchIcon, // Représente la recherche, la phase d’analyse
         iconForeground: "text-green-700",
         iconBackground: "bg-green-50 dark:bg-green-950/30",
@@ -17,7 +17,7 @@ const actions = [
         title: "Concevoir avec précision",
         description:
             "Sélection des outils techniques en fonction de vos contraintes et objectifs.",
-        href: "#",
+        href: "#contact",
         icon: SlidersHorizontalIcon, // Souplesse, personnalisation, ajustements
         iconForeground: "text-red-700",
         iconBackground: "bg-red-50 dark:bg-red-950/30",
@@ -27,7 +27,7 @@ const actions = [
         title: "Adapter les solutions",
         description:
             "Livraisons régulières pour suivre ensemble les avancées du développement.",
-        href: "#",
+        href: "#contact",
         icon: Goal, // Objectifs, stratégie, précision
         iconForeground: "text-blue-700",
         iconBackground: "bg-blue-50 dark:bg-blue-950/30",
@@ -37,7 +37,7 @@ const actions = [
         title: "Accompagner dans la durée",
         description:
             "Suivi de votre solution et de l'évolution de vos besoins sur le long terme.",
-        href: "#",
+        href: "#contact",
         icon: RepeatIcon, // Cycle, suivi, amélioration continue
         iconForeground: "text-pink-700",
         iconBackground: "bg-pink-50 dark:bg-pink-950/30",
@@ -60,16 +60,16 @@ export default function ArgumentsList() {
                     >
                         <CardContent className="p-6">
                             <div>
-                <span
-                    className={cn(
-                        action.iconBackground,
-                        action.iconForeground,
-                        "inline-flex rounded-lg p-3 ring-2 ring-inset",
-                        action.ringColorClass
-                    )}
-                >
-                  <action.icon aria-hidden="true" className="h-6 w-6"/>
-                </span>
+                                <span
+                                    className={cn(
+                                        action.iconBackground,
+                                        action.iconForeground,
+                                        "inline-flex rounded-lg p-3 ring-2 ring-inset",
+                                        action.ringColorClass
+                                    )}
+                                >
+                                  <action.icon aria-hidden="true" className="h-6 w-6"/>
+                                </span>
                             </div>
                             <div className="mt-4">
                                 <h3 className="text-base font-semibold text-foreground">
@@ -84,10 +84,11 @@ export default function ArgumentsList() {
                             </div>
                             <span
                                 aria-hidden="true"
-                                className="pointer-events-none absolute top-6 right-6 text-muted-foreground/50 group-hover:text-muted-foreground/60"
+                                className="pointer-events-none absolute top-6 right-6 text-muted-foreground/50 group-hover:text-green-600 transition-colors duration-300"
                             >
-                <ArrowUpRight className="h-6 w-6"/>
-              </span>
+                                <CheckCircle2
+                                    className="h-6 w-6 ring-green-700/30 rounded-full"/>
+                            </span>
                         </CardContent>
                     </Card>
                 ))}

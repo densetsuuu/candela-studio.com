@@ -2,7 +2,7 @@ import type React from "react"
 import {cva, type VariantProps} from "class-variance-authority"
 
 const neumorphEyebrowVariants = cva(
-    "rounded-full border-[.75px] px-4 w-fit h-8 flex items-center text-sm font-medium mb-2 shadow-[inset_0px_-2.10843px_0px_0px_rgb(244,241,238),_0px_1.20482px_6.3253px_0px_rgb(244,241,238)]",
+    "rounded-full border-[.75px] px-4 w-fit h-8 flex items-center text-xs font-medium mb-2 shadow-[inset_0px_-2.10843px_0px_0px_rgb(244,241,238),_0px_1.20482px_6.3253px_0px_rgb(244,241,238)]",
     {
         variants: {
             intent: {

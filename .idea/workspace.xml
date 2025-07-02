@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="719c73c0-d7ab-451b-b76f-23f94d3f10c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/sections/key-numbers-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/magicui/orbiting-circles.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nav-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav-menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/presentation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/presentation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/about-section.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/arguments-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/arguments-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/arguments/arguments-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/why-us/arguments-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/magicui/grid-background.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/magicui/grid-background.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/contact-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/contact-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/faq-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/faq-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sections/hero-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/hero-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/work-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/work-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/work/project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/work/project.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/why-us/arguments-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/why-us/arguments-list.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/neumorph-eyebrow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/neumorph-eyebrow.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +108,7 @@
       <workItem from="1751449912900" duration="61000" />
       <workItem from="1751451167137" duration="4974000" />
       <workItem from="1751460062046" duration="7000" />
-      <workItem from="1751460075999" duration="5735000" />
+      <workItem from="1751460075999" duration="7981000" />
     </task>
     <servers />
   </component>
