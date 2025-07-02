@@ -36,6 +36,11 @@ export const NavMenu = (props: NavigationMenuProps) => {
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
                                     <Button variant="link" asChild className="text-inherit">
+                                        <Link href="#work">Réalisations</Link>
+                                    </Button>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <Button variant="link" asChild className="text-inherit">
                                         <Link href="#about">À propos</Link>
                                     </Button>
                                 </NavigationMenuItem>

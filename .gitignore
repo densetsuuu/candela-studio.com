@@ -36,3 +36,5 @@ next-env.d.ts
 
 # conventional commits
 .vscode
+
+.idea

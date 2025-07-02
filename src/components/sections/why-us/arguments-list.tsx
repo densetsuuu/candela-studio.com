@@ -1,74 +1,55 @@
 import {Card, CardContent} from "@/components/ui/card";
 import {cn} from "@/lib/utils";
-import {ArrowUpRight, Bot, Hand, MonitorSmartphone, Rocket, ScanFaceIcon, Server,} from "lucide-react";
+import {ArrowUpRight, Goal, RepeatIcon, SearchIcon, SlidersHorizontalIcon,} from "lucide-react";
 
 const actions = [
     {
-        title: "Respect du référentiel RGAA",
+        title: "Comprendre vos enjeux",
         description:
-            "Chaque site est conçu dans le respect strict du RGAA pour garantir une accessibilité universelle.",
+            "Écoute active de vos besoins pour définir une solution qui correspond à vos attentes.",
         href: "#",
-        icon: ScanFaceIcon,
+        icon: SearchIcon, // Représente la recherche, la phase d’analyse
         iconForeground: "text-green-700",
         iconBackground: "bg-green-50 dark:bg-green-950/30",
         ringColorClass: "ring-green-700/30",
     },
     {
-        title: "Design mobile-first",
+        title: "Concevoir avec précision",
         description:
-            "Une approche pensée dès le départ pour le mobile, afin d’assurer une expérience fluide sur tous les supports.",
+            "Sélection des outils techniques en fonction de vos contraintes et objectifs.",
         href: "#",
-        icon: MonitorSmartphone,
+        icon: SlidersHorizontalIcon, // Souplesse, personnalisation, ajustements
         iconForeground: "text-red-700",
         iconBackground: "bg-red-50 dark:bg-red-950/30",
         ringColorClass: "ring-red-700/30",
     },
     {
-        title: "Maintenance et support",
+        title: "Adapter les solutions",
         description:
-            "Un accompagnement fiable et réactif pour assurer la stabilité et la longévité de votre site.",
+            "Livraisons régulières pour suivre ensemble les avancées du développement.",
         href: "#",
-        icon: Server,
+        icon: Goal, // Objectifs, stratégie, précision
         iconForeground: "text-blue-700",
         iconBackground: "bg-blue-50 dark:bg-blue-950/30",
         ringColorClass: "ring-blue-700/30",
     },
     {
-        title: "Performance et SEO",
+        title: "Accompagner dans la durée",
         description:
-            "Optimisation des temps de chargement, du code et du référencement pour un site rapide et bien positionné.",
+            "Suivi de votre solution et de l'évolution de vos besoins sur le long terme.",
         href: "#",
-        icon: Rocket,
-        iconForeground: "text-sky-700",
-        iconBackground: "bg-sky-50 dark:bg-sky-950/30",
-        ringColorClass: "ring-sky-700/30",
-    },
-    {
-        title: "IA et solutions personnalisées",
-        description:
-            "Des fonctionnalités sur mesure, boostées par l’intelligence artificielle pour répondre à vos besoins spécifiques.",
-        href: "#",
-        icon: Bot,
+        icon: RepeatIcon, // Cycle, suivi, amélioration continue
         iconForeground: "text-pink-700",
         iconBackground: "bg-pink-50 dark:bg-pink-950/30",
         ringColorClass: "ring-pink-700/30",
     },
-    {
-        title: "Confiance et sécurité des données",
-        description:
-            "Sécurité, confidentialité, conformité : vos données sont protégées selon les standards les plus exigeants.",
-        href: "#",
-        icon: Hand,
-        iconForeground: "text-orange-700",
-        iconBackground: "bg-orange-50 dark:bg-orange-950/30",
-        ringColorClass: "ring-orange-700/30",
-    },
 ];
+
 
 export default function ArgumentsList() {
     return (
-        <div className="flex items-center justify-center p-8">
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 text-start">
+        <div className="flex items-center justify-center py-8">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 text-start">
                 {actions.map((action) => (
                     <Card
                         key={action.title}
